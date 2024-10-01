@@ -2,6 +2,7 @@ public class Task {
     private String title;
     private String description;
     private boolean completed;
+    public boolean pending;
 
     public Task(String title, String description) {
         this.title = title;
@@ -13,8 +14,16 @@ public class Task {
         return completed;
     }
 
+    public boolean isPending() {
+        return !completed;
+    }
+
     public void setCompleted(boolean completed) {
         this.completed = completed;
+    }
+
+    public void setPending(boolean pending) {
+        this.pending = pending;
     }
 
     @Override
